@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Подключение Bootstrap-->
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../js/slider_js.js"></script>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/slider_css.css">
+  <title>Мебельный салон Люди Кухни</title>
+</head>
+<body>
+  <header class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded">
+    <div class="container-fluid"><a class="navbar-brand ml-2" href="#"><img class="img-fluid rounded float-begin" src="../img/logo.png" alt="Логотип" width="81px" height="75px"></a>
+      <div class="nav-item m-3">
+        <p class="h6">+7 (863) 431-4707</p>
+        <p class="h6">+7 (863) 431-1707</p>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 h5">
+          <li class="nav-item my-auto"><a class="nav-link" href="#">О нас</a></li>
+          <li class="nav-item my-auto"><a class="nav-link" href="#">Ассортимент</a></li>
+          <li class="nav-item my-auto"><a class="nav-link" href="#">Контакты</a></li>
+        </ul>
+        <div class="d-flex">
+          <button class="button-header" type="button">Вход</button>
+          <button class="button-header" type="button">Регистрация</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <h1 class="first-text fw-bold text-center">ДОБРО ПОЖАЛОBАТЬ</h1>
+        <h2 class="first-text first-text-little">Мы - мебельный салон Люди Кухни!</h2>
+        <h2 class="first-text first-text-little">Радуем клиентов более 20 лет. Помогаем с выбором, направляем по материалам, разделяем ваши взгляды и решаем проблемы!</h2>
+        <h2 class="first-text first-text-little">Далее мы продемонстрируем несколько популярных стилей кухонь и представим другие профили нашей работы.</h2>
+        <h2 class="first-text text-center">Приятного просмотра!</h2>
+      </div>
+      <div class="col my-auto"><img class="img-fluid rounded float-end" src="../img/first.png" alt="Фотография"></div>
+    </div>
+  </div>
+  <div class="slider">
+    <svg class="slider__mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1920 1080" width="0" height="0">
+      <defs>
+        <!-- Slide 1-->
+        <pattern id="pattern1l" patternunits="userSpaceOnUse" x="-20px" width="570" height="520" viewbox="0 0 570 520">
+          <image xlink:href="https://svgshare.com/i/nX0.svg" width="700px" height="700px"></image>
+        </pattern>
+        <pattern id="pattern1r" patternunits="userSpaceOnUse" x="340px" width="570" height="520" viewbox="0 0 570 520">
+          <image xlink:href="https://svgshare.com/i/nZC.svg" width="700px" height="700px"></image>
+        </pattern>
+        <!-- Slide 2-->
+        <pattern id="pattern2l" patternunits="userSpaceOnUse" width="570" height="520" viewbox="0 0 570 520">
+          <image xlink:href="https://svgshare.com/i/nXC.svg" width="700px" height="700px"></image>
+        </pattern>
+        <pattern id="pattern2r" patternunits="userSpaceOnUse" x="340px" width="570" height="520" viewbox="0 0 570 520">
+          <image xlink:href="https://svgshare.com/i/nb0.svg" width="700px" height="700px"></image>
+        </pattern>
+        <!-- Slide 3-->
+        <pattern id="pattern3l" patternunits="userSpaceOnUse" width="570" height="520" viewbox="0 0 570 520">
+          <image xlink:href="https://svgshare.com/i/n_g.svg" width="700px" height="700px"></image>
+        </pattern>
+        <pattern id="pattern3r" patternunits="userSpaceOnUse" x="340px" width="570" height="520" viewbox="0 0 570 520">
+          <image xlink:href="https://svgshare.com/i/nas.svg" width="700px" height="700px"></image>
+        </pattern>
+      </defs>
+    </svg>
+    <div class="slide" id="slide-1">
+      <div class="slide__images">
+        <div class="slide__image slide__image--left">
+          <svg viewbox="0 0 900 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+            <path d="M 0 0 L 0 520 L 350 520 L 570 0 L 0 0 Z" fill="url(#pattern1l)"></path>
+          </svg>
+        </div>
+        <div class="slide__image slide__image--right">
+          <svg viewbox="0 0 900 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+            <path d="M 900 520 L 900 0 L 560 0 L 338 520 L 900 520 Z" fill="url(#pattern1r)"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="slide" id="slide-2">
+      <div class="slide__images">
+        <div class="slide__image slide__image--left">
+          <svg viewbox="0 0 900 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+            <path d="M 0 0 L 0 520 L 350 520 L 570 0 L 0 0 Z" fill="url(#pattern2l)"></path>
+          </svg>
+        </div>
+        <div class="slide__image slide__image--right">
+          <svg viewbox="0 0 900 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+            <path d="M 900 520 L 900 0 L 560 0 L 338 520 L 900 520 Z" fill="url(#pattern2r)"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="slide" id="slide-3">
+      <div class="slide__images">
+        <div class="slide__image slide__image--left">
+          <svg viewbox="0 0 900 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+            <path d="M 0 0 L 0 520 L 350 520 L 570 0 L 0 0 Z" fill="url(#pattern3l)"></path>
+          </svg>
+        </div>
+        <div class="slide__image slide__image--right">
+          <svg viewbox="0 0 900 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+            <path d="M 900 520 L 900 0 L 560 0 L 338 520 L 900 520 Z" fill="url(#pattern3r)"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="slider__pagination"><a class="button" href="#slide-1">Классика</a><a class="button" href="#slide-2">Модерн</a><a class="button" href="#slide-3">Минимализм</a></div>
+  </div>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+      <div class="col mb-3">
+        <article class="card"><img class="card-img-top" src="../img/ya1.jpg" alt="Фотография">
+          <div class="card-body">
+            <h2 class="card-title h4">Настенные полки</h2>
+            <p class="card-text">Описание товара</p><a class="btn btn-primary" href="#">Перейти</a>
+          </div>
+        </article>
+      </div>
+      <div class="col mb-3">
+        <article class="card"><img class="card-img-top" src="../img/ya2.png" alt="Фотография">
+          <div class="card-body">
+            <h2 class="card-title h4">Серванты</h2>
+            <p class="card-text">Описание товара</p><a class="btn btn-primary" href="#">Перейти</a>
+          </div>
+        </article>
+      </div>
+      <div class="col mb-3">
+        <article class="card"><img class="card-img-top" src="../img/ya3.jpg" alt="Фотография">
+          <div class="card-body">
+            <h2 class="card-title h4">Перегородки</h2>
+            <p class="card-text">Описание товара</p><a class="btn btn-primary" href="#">Перейти</a>
+          </div>
+        </article>
+      </div>
+      <div class="col mb-3">
+        <article class="card"><img class="card-img-top" src="../img/ya4.png" alt="Фотография">
+          <div class="card-body">
+            <h2 class="card-title h4">Стеллажи</h2>
+            <p class="card-text">Описание товара</p><a class="btn btn-primary" href="#">Перейти</a>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-12">
+        <article class="card"><img class="card-img-top" src="../img/ya5.png" alt="Фотография">
+          <div class="card-body">
+            <h2 class="card-title h4">Кухни</h2>
+            <p class="card-text">Описание товара</p><a class="btn btn-primary" href="#">Перейти</a>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 mb-3">
+        <article class="card"><img class="card-img-top" src="../img/ya7.jpg" alt="Фотография">
+          <div class="card-body">
+            <h2 class="card-title h4">Материалы</h2>
+            <p class="card-text">Описание товара</p><a class="btn btn-primary" href="#">Перейти</a>
+          </div>
+        </article>
+      </div>
+      <div class="col mb-3">
+        <article class="card"><img class="card-img-top" src="../img/ya6.png" alt="Фотография">
+          <div class="card-body">
+            <h2 class="card-title h4">Шкафы-купе</h2>
+            <p class="card-text">Описание товара</p><a class="btn btn-primary" href="#">Перейти</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-6 map-image contacts fw-bold justify-content-around py-4">
+        <p class="mx-auto">Будем рады видеть Вас в нашем салоне!</p>
+        <p class="contacts-row">Адрес:<span class="font-normal">г. Таганрог, ул. Петровская 15</span></p>
+        <p class="contacts-row">Телефон:<span class="font-normal">+7 (863) 431-4707</span><span class="font-normal">+7 (863) 431-1707</span></p>
+        <p class="contacts-row">Email:<span class="font-normal">barvenko@list.ru</span></p>
+        <p class="contacts-row">Мы есть в VK:<span class="font-normal">vk.com/ludikuhni</span></p>
+      </div>
+      <div class="col border border-secondary border-5 px-0">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad1a5893aac5359b75107c15a65c9184e3bebff8fcf41061271f3a2674e1830c4&amp;amp;width=700&amp;amp;height=600&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"><a class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none" href="/"><img class="bi me-2" src="../img/logo.png" width="45" height="50"></a>
+      <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Войти</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Ассортимент</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="https://vk.com/ludikuhni">VK</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>

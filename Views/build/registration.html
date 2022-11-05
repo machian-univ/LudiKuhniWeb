@@ -1,0 +1,62 @@
+
+<html lang="ru"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Подключение Bootstrap-->
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../js/slider_js.js"></script>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../css/slider_css.css"/>
+  <title>Мебельный салон Люди Кухни</title>
+</head>
+<body class="bck">
+  <header class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded">
+    <div class="container-fluid"><a class="navbar-brand ml-2" href="#"><img class="img-fluid rounded float-begin" src="../img/logo.png" alt="Логотип" width="81px" height="75px"/></a>
+      <div class="nav-item m-3">
+        <p class="h6">+7 (863) 431-4707</p>
+        <p class="h6">+7 (863) 431-1707</p>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 h5">
+          <li class="nav-item my-auto"><a class="nav-link" href="#">О нас</a></li>
+          <li class="nav-item my-auto"><a class="nav-link" href="#">Ассортимент</a></li>
+          <li class="nav-item my-auto"><a class="nav-link" href="#">Контакты</a></li>
+        </ul>
+        <div class="d-flex">
+          <button class="button-header" type="button">Вход</button>
+          <button class="button-header" type="button">Регистрация</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-8 mx-auto my-auto form-bck">
+        <div class="card-body p-lg-5">
+          <h1 class="m-4 fw-light first-text fw-bold text-uppercase">Регистрация</h1>
+          <div class="pt-lg-3">
+            <form class="simple_form new_user_sign_up_form" id="new_user_sign_up_form" novalidate="novalidate" action="/u" accept-charset="UTF-8" method="post">
+              <div class="mb-2 email required user_sign_up_form_email">
+                <label class="form-label email required" for="user_email">Электронная почта<span title="обязательно">*</span></label>
+                <input class="form-control string email required" id="user_email" autofocus="autofocus" type="email" name="user_sign_up_form[email]"/>
+              </div>
+              <div class="mb-2 string optional user_sign_up_form_first_name">
+                <label class="form-label string optional" for="user_sign_up_form_first_name">Имя</label>
+                <input class="form-control string optional" id="user_sign_up_form_first_name" type="text" name="user_sign_up_form[first_name]"/>
+              </div>
+              <div class="mb-2 password optional user_sign_up_form_password">
+                <label class="form-label password optional" for="user_sign_up_form_password">Пароль</label>
+                <input class="form-control password optional" id="user_sign_up_form_password" type="password" name="user_sign_up_form[password]"/>
+              </div>
+              <input class="btn btn-primary w-100" type="submit" name="commit" value="Зарегистрироваться" data-disable-with="Зарегистрироваться"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

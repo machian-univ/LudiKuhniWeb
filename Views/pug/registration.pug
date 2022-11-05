@@ -1,0 +1,34 @@
+html(lang="ru")
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // Подключение Bootstrap
+  script(src='../../node_modules/jquery/dist/jquery.min.js')
+  script(src='../../node_modules/popper.js/dist/umd/popper.js')
+  script(src='../../node_modules/bootstrap/dist/js/bootstrap.min.js')
+  script(src='../js/slider_js.js')
+  link(rel='stylesheet' href='../../node_modules/bootstrap/dist/css/bootstrap.min.css')
+  link(rel='stylesheet' href='../css/slider_css.css')
+  title Мебельный салон Люди Кухни
+body.bck
+  include header.pug
+  .container
+    .row
+      .col-8.mx-auto.my-auto.form-bck
+        .card-body.p-lg-5
+          h1.m-4.fw-light.first-text.fw-bold.text-uppercase Регистрация
+          .pt-lg-3
+            form#new_user_sign_up_form.simple_form.new_user_sign_up_form(novalidate='novalidate' action='/signup' accept-charset='UTF-8' method='POST')
+                .mb-2.email.required.user_sign_up_form_email
+                    label.form-label.email.required(for='user_email')
+                        | Электронная почта
+                        span(title='обязательно') *
+                    input#user_email.form-control.string.email.required(autofocus='autofocus' type='email' name='email')
+                .mb-2.string.optional.user_sign_up_form_first_name
+                    label.form-label.string.optional(for='user_sign_up_form_first_name') Имя
+                    input#user_sign_up_form_first_name.form-control.string.optional(type='text' name='name')
+                .mb-2.password.optional.user_sign_up_form_password
+                    label.form-label.password.optional(for='user_sign_up_form_password') Пароль
+                    input#user_sign_up_form_password.form-control.password.optional(type='password' name='password')
+                input.btn.btn-primary.w-100(type='submit' name='commit' value='Зарегистрироваться' data-disable-with='Зарегистрироваться')
+  include footer.pug

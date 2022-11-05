@@ -3,18 +3,10 @@
 const User = require("../Models/User")
 
 exports.getMainPage = (req, res) => {
+    
+    // res.sendFile("/Views/mainPage.html", { root: 'C:/Users/machy/VSCProjects/LudiKuhniWeb' })
+    // res.sendFile("/Views/build/index_main.html", { root: __dirname })
 
-    // Создаётся объект promise
-    var test
-    let promise = new Promise((resolve) => {
-    // Тут должна быть ваша функция, из-за которой весь код будет приостановлен
     
-    test = User.findByEmail("test1@mail.ru");
-     setTimeout(() => {
-        resolve(1);
-     }, 1000)
-    //Как только функция завершила свое действие, вызываем следующий метод, который продолжит выполнение кода:
-    }).then(() => {console.log(test.NAME)})
-    
-    res.sendFile("/Views/mainPage.html", { root: __dirname })
+    res.render("../Views/pug/index_main")
 }
