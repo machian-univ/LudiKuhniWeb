@@ -1,0 +1,26 @@
+{
+  "name": "testloginconntobd1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "flash": "^1.1.0",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "node-localstorage": "^2.2.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  }
+}

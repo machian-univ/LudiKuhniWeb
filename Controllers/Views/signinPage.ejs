@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Example Login Form</title>
+  </head>
+  <body>
+    <!-- show any messages that come back with authentication -->
+    <% if (message.length > 0) { %>
+      <div class="alert alert-danger"><%= message %></div>
+  <% } %>
+    <form action="/signin" method="POST">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Войти</button>
+      </form>
+  </body>
+</html>
