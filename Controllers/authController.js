@@ -8,7 +8,7 @@ exports.getSignupPage = (req, res) => {
     // res.render(__dirname +'/Views/signupPage.ejs', { message: req.flash('signupMessage') })
 
 
-    res.render('../Views/pug/registration')
+    res.render('../Views/pug/registration', { message: req.flash('signupMessage') })
 
 }
 
@@ -17,6 +17,6 @@ exports.getSigninPage = (req, res) => {
 
 
 
-    res.render('../Views/pug/sign-in')
+    res.render('../Views/pug/sign-in', { message: req.flash('signinMessage') })
 
 }
