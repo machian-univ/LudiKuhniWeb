@@ -22,15 +22,8 @@ app.use(session({
 	  }
  } )); // session secret
 
-app.use(express.static( __dirname + '/node_modules/bootstrap/dist/css'));
-app.use(express.static( __dirname + '/Views'));
+app.use(express.static( __dirname + '/views'));
 app.set('view engine', 'pug'); // set up ejs for templating
-
-// app.use(express.static(__dirname + '/Views/build'));
-// app.use(express.static(__dirname + '/Views/css'));
-// app.use(express.static(__dirname +'.Views/fonts'))
-// app.use(express.static(__dirname + '.Views/img'))
-// app.use(express.static(__dirname + '.Views/js'))
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
@@ -44,9 +37,6 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 const routes = require('./routes')
 // routes ======================================================================
 require('./routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
-
-
-
 
 
 app.listen(3000, () => {

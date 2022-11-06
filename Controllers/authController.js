@@ -17,8 +17,6 @@ exports.getSigninPage = (req, res) => {
 
 
 
-
-
     res.render('../Views/pug/sign-in')
 
 }

@@ -2,10 +2,9 @@
 
 module.exports = (app, passport) => {
     
-    const innerController =  require('./Controllers/innerController')
-    const authController = require('./Controllers/authController')
-    const adminController = require('./Controllers/adminController.js')
-    const userController = require('./Controllers/userController.js')
+    const innerController =  require('./controllers/indexController')
+    const authController = require('./controllers/authController')
+    const userController = require('./controllers/userController.js')
     
     app
         .route('/')
