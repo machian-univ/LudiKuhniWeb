@@ -6,8 +6,8 @@ const bodyParser = require('body-parser')
 
 var cookieParser = require('cookie-parser');
 const passport = require('passport')
-var session  = require('express-session');
-var flash    = require('connect-flash');
+var session = require('express-session');
+var flash = require('connect-flash');
 
 require('./settings/passport_config')(passport)
 
@@ -28,14 +28,13 @@ app.set('view engine', 'pug'); // set up ejs for templating
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 
+app.use(cookieParser());
 app.use(passport.initialize())
-app.use(cookieParser()); // read cookies (needed for auth
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+app.use(passport.session());
+app.use(flash());
 
 
 const routes = require('./routes')
-// routes ======================================================================
 require('./routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 
