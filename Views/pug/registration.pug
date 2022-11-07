@@ -21,16 +21,19 @@ body.bck
             form(novalidate='novalidate' action='/signup' accept-charset='UTF-8' method='POST')
               if (message.length > 0)
                 div.alert.alert-danger #{message}
+              if (errors.length > 0)
+                for error in errors 
+                  div.alert.alert-danger #{error.msg}
               .mb-2.email.required.user_sign_up_form_email
                   label.form-label.email.required(for='user_email')
                       | Электронная почта
                       span(title='обязательно') *
-                  input#user_email.form-control.string.email.required(autofocus='autofocus' type='email' name='email')
+                  input#user_email.form-control.string.email.required(autofocus='autofocus' type='email' name='username' required)
               .mb-2.string.optional.user_sign_up_form_first_name
                   label.form-label.string.optional(for='user_sign_up_form_first_name') Имя
-                  input#user_sign_up_form_first_name.form-control.string.optional(type='text' name='name')
+                  input#user_sign_up_form_first_name.form-control.string.optional(type='text' name='name' required)
               .mb-2.password.optional.user_sign_up_form_password
                   label.form-label.password.optional(for='user_sign_up_form_password') Пароль
-                  input#user_sign_up_form_password.form-control.password.optional(type='password' name='password')
+                  input#user_sign_up_form_password.form-control.password.optional(type='password' name='password' required)
               input.btn.btn-primary.w-100(type='submit' name='commit' value='Зарегистрироваться' data-disable-with='Зарегистрироваться')
   include footer.pug

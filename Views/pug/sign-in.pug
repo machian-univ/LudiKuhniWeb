@@ -19,14 +19,14 @@ body.bck
           h1.m-4.fw-light.first-text.fw-bold.text-uppercase Вход
           .pt-lg-4
             form(novalidate='novalidate' action='/signin' accept-charset='UTF-8' method='POST')
-              if (message.length > 0)
-                div.alert.alert-danger #{message}
+              if (errors.length > 0 || message.length > 0)
+                div.alert.alert-danger #{'Неверный Email или пароль.'}
               .mb-2.email.optional.user_sign_in_type_email
                   label.form-label.email.optional(for='user_sign_in_type_email') &Ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&acy;&yacy; &pcy;&ocy;&chcy;&tcy;&acy;
-                  input#user_sign_in_type_email.form-control.string.email.optional(autofocus='autofocus' type='email' name='email')
+                  input#user_sign_in_type_email.form-control.string.email.optional(autofocus='autofocus' type='email' name='username' required)
               .mb-2.password.optional.user_sign_in_type_password
                   label.form-label.password.optional(for='user_sign_in_type_password') &Pcy;&acy;&rcy;&ocy;&lcy;&softcy;
-                  input#user_sign_in_type_password.form-control.password.optional(type='password' name='password')
+                  input#user_sign_in_type_password.form-control.password.optional(type='password' name='password' required)
               .text-end.my-3
                   input#hexlet-login-form-submit.btn.btn-primary.w-100(type='submit' name='commit' value='Войти' data-disable-with='Войти')
 
