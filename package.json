@@ -21,6 +21,7 @@
     "jstransformer-markdown-it": "^3.0.0",
     "lodash": "^4.17.21",
     "mysql": "^2.18.1",
+    "mysql-await": "^2.2.2",
     "node-localstorage": "^2.2.1",
     "npx": "^3.0.0",
     "passport": "^0.6.0",

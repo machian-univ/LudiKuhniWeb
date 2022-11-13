@@ -1,4 +1,4 @@
-const mysql = require("mysql")
+const mysql = require(`mysql-await`)
 const config = require('./config')
 
 const connection = mysql.createConnection({
