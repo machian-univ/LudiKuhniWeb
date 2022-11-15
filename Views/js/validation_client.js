@@ -1,33 +1,74 @@
-// проверка формы
-function validateForm(e) {
+const main_form = document.forms.reg;
 
-  const
-    form = e.target,
-    field = Array.from(form.elements);
+const email = main_form.username;
+const nameus = main_form.name;
+const pass = main_form.password;
 
-  // сброс полей
-  field.forEach(i => {
-    i.setCustomValidity('');
-    i.parentElement.classList.remove('invalid');
-  });
+main_form.addEventListener("submit", function(event){
+  console.log('форма отправляется ...');
 
-  // email или телефон заданы?
-  const err = form.email.value || form.tel.value ? '' : 'error';
-  form.email.setCustomValidity(err);
-  form.tel.setCustomValidity(err);
-
-  if (!form.checkValidity()) {
-
-    // форма не прошла валидацию - отмена отправки
-    e.preventDefault();
-    e.stopImmediatePropagation();
-
-    // добавляем класс invalid
-    field.forEach(i => {
-      if (!i.checkValidity()) {
-        // поле не прошло валидацию - добавляем класс
-        i.parentElement.classList.add('invalid');
-      }
-    });
+  if(!email.value){
+    console.log('поле Почта не заполнено');
+    email.parentElement.insertAdjacentHTML(
+			"beforeend",
+			`<div class="alert alert-danger mt-2">
+        Введите электронную почту перед отправкой
+			</div>`
+		);
+    event.preventDefault();
   }
+  else  if (emailTest(main_form)) {
+		email.parentElement.insertAdjacentHTML(
+			"beforeend",
+			`<div class="alert alert-danger mt-2">
+				Электронная почта введена неверно
+			</div>`
+		);
+		event.preventDefault();
+	}
+
+  if(!nameus.value){
+    console.log('поле Имя не заполнено');
+    nameus.parentElement.insertAdjacentHTML(
+			'beforeend',
+			`<div class="alert alert-danger mt-2">
+        Введите имя перед отправкой
+			</div>`
+		);
+    event.preventDefault();
+  }
+
+  if(!pass.value){
+    console.log('поле Пароль не заполнено');
+    pass.insertAdjacentHTML(
+			'beforeend',
+			`<div class="alert alert-danger mt-2">
+				Введите пароль перед отправкой
+			</div>`
+		);
+    event.preventDefault();
+  }
+
+});
+
+email.addEventListener("focus", function (event) {
+	if (email.nextElementSibling) {
+		email.nextElementSibling.remove();
+	}
+});
+
+nameus.addEventListener("focus", function (event) {
+	if (nameus.nextElementSibling) {
+		nameus.nextElementSibling.remove();
+	}
+});
+
+pass.addEventListener("focus", function (event) {
+	if (pass.nextElementSibling) {
+		pass.nextElementSibling.remove();
+	}
+});
+
+function emailTest(input) {
+	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
 }
