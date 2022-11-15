@@ -192,5 +192,8 @@
 .form-bck{
   background-color: #FCFCFC;
   border: 5px solid #00F500;
-  height: 50vh;
+}
+
+input:invalid {
+  border: 2px  red;
 }

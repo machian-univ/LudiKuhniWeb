@@ -10,14 +10,14 @@ var SignUpValidate = [
         .ltrim(' ')
         .rtrim(' '),
     body('password')
-        .escape(), 
+        .escape(),
     check('username', 'Некорректный Email.')
         .isEmail(),
     check('name')
         .isLength({ min: 3 }).withMessage("Имя должно содержать минимум 3 символа."),
     check('password')
-        .isLength({ min: 6 }).withMessage('Пароль должен содеражать миниммум 6 символов.')
-        .isLength({ max: 20 }).withMessage('Пароль должен содеражать максимум 20 символов.')
+        .isLength({ min: 6 }).withMessage('Пароль должен содержать миниммум 6 символов.')
+        .isLength({ max: 20 }).withMessage('Пароль должен содержать максимум 20 символов.')
         .matches('[0-9]').withMessage('Пароль должен содержать минимум одну цифру.')
         .matches('[a-zA-Z]').withMessage('Пароль должен содержать минимум одну латинскую букву.')
         .isAlphanumeric().withMessage('Пароль должен состоять из цифр и латиских букв.')
@@ -29,7 +29,7 @@ var SignInValidate = [
         .ltrim(' ')
         .rtrim(' '),
     body('password')
-        .escape(), 
+        .escape(),
     check('username')
         .isEmail(),
     check('password')
