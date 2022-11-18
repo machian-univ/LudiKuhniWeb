@@ -13,7 +13,7 @@ module.exports = function(passport) {
 
     passport.deserializeUser(async function(id, done) {
         const selectSQL = "SELECT * FROM users WHERE id = ?"
-        let err, result = await db.awaitQuery(selectSQL, [username])
+        let err, result = await db.awaitQuery(selectSQL, [id])
             done(err, result[0])
     })
 

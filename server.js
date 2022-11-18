@@ -23,6 +23,7 @@ app.use(session({
  } )); // session secret
 
 app.use(express.static( __dirname + '/views'));
+
 app.set('view engine', 'pug'); // set up ejs for templating
 
 app.use(bodyParser.urlencoded({ extended: false }));
