@@ -1,4 +1,5 @@
 'use strict'
+
 const db = require('../settings/db');
 
 exports.getHomePage = async (req, res) => {
@@ -24,10 +25,9 @@ exports.getHomePage = async (req, res) => {
             return order
         }))
     
-        res.send(orderList)
+        res.render('../Views/pug/user.pug', {orders: orderList})
     } else {
 
-        res.send("Пока Ваш список заказов пуст!")
+        res.render('../Views/pug/user.pug', {message: "Пока Ваш список заказов пуст!"})
     }
-    
 }
