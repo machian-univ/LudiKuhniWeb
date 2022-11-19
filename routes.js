@@ -47,12 +47,17 @@ module.exports = (app, passport) => {
 
 
 function isLoggedIn(req, res, next) {
-	if (req.isAuthenticated())
-		return next();
-	res.redirect('/signin');
+	if (req.isAuthenticated()) {
+        return next();
+    }
+	res.redirect('/signin')
 }
 
-function LogOut(req, res) {
-    req.logout();
-    res.redirect('/');
+function LogOut(req, res, next) {
+    req.logout((err) => {
+        if (err) { 
+            return next(err) 
+        }
+        res.redirect('/')
+      })
 }
