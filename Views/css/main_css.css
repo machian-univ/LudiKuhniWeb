@@ -1,18 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,800");
 
+body{
+  background-color: #F7F7F7;
+}
+
 .slider {
   width: 100vw;
-  height: 70vh;
+  height: 85vh;
   display: flex;
   background-color: slategrey;
   margin-bottom: 10vh;
+  align-content: center;
 }
 
 .slide {
-  display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 7vh;
+  padding-top: 12vh;
   height: 70vh;
   position: absolute;
   width: 100%;
@@ -29,15 +33,16 @@
 
 .slide__images {
   position: relative;
+  align-content: center;
+  height: 70vh;
   width: 100%;
-  max-width: 900px;
-  height: 520px;
-  margin: 20px 20px;
 }
 
 .slide__image {
   position: absolute;
-  width: 100%;
+  align-content: center;
+  left: 23vw;
+  width: 55vw;
   opacity: 0;
   transition: all 0.5s ease-in-out 0s;
   filter: blur(10px) drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.35));
@@ -55,10 +60,10 @@
 }
 
 .slider__pagination {
-  position: absolute;
   width: 100%;
+  height: 7vh;
   text-align: center;
-  justify-content: center;
+  align-items: flex-start;
   margin-top: 20px;
 }
 
@@ -68,7 +73,7 @@
   padding: 20px 40px;
   border: 2px solid #ffffff;
   line-height: 1;
-  font: 600 12px "Montserrat", sans-serif;
+  font: 600 calc(7px + 14 * (35vw/1280)) "Montserrat", sans-serif;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -176,11 +181,6 @@
   font-weight: 400;
 }
 
-.zelen{
-  width: calc(150px + 25 * (100vw/1280));
-  display: block;
-  position: absolute;
-}
 
 .bck{
   background: url("../img/background.png");
@@ -194,6 +194,28 @@
   border: 5px solid #00F500;
 }
 
-input:invalid {
-  border: 2px  red;
+.t-s{
+  font-size: calc(10px + 14 * (20vw/1280))
+}
+
+.order_back{
+  width: 100%;
+  background-image: '../img/order.png';
+}
+
+.font-mont{
+  font-family: "Montserrat", sans-serif;
+  color: #0D044A;
+}
+
+.order_contact{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: #000000;
+
+  width: 100%;
+  background-image: '../img/order_contact.png';
 }
