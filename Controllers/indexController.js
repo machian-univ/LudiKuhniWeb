@@ -1,5 +1,7 @@
 'use strict'
 
 exports.getMainPage = (req, res) => {  
-    res.render('pug/index_main.pug')
+    
+    var isAuth = req.isAuthenticated()
+    res.render('pug/index_main.pug', {isUser: isAuth})
 }
