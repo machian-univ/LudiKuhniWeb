@@ -1,15 +1,21 @@
 .container
   .row
     .col-12
-      h1.first-text.fw-bold.text-center ДОБРО ПОЖАЛОBАТЬ
+      h1.first-text.fw-bold.text-center.text-uppercase Добро пожаловать, #{name_user}
   .row
     .col-12
       h2.first-text.first-text-little.px-5 Ваши заказы:
   .row
-    .col-12.order_back.mb-4.font-mont
-            p.first-text.fw-bold.text-center Название обалденного заказа
-            p.first-text.first-text-little Описание описание описание описание описание описание описание описание описание описание описание описание описание описание
-            p.first-text.text-center Статус заказа : Status
+    .col-12
+      if (orders.length > 0)
+	      for order in orders
+          .order_back.mb-4.font-mont
+            p.first-text.fw-bold.text-center #{order.title}
+            p.first-text.first-text-little #{order.discription}
+            p.first-text.text-center #{order.status}
+      else
+        .mb-4.font-mont
+          p.first-text.text-center #{message}
   .row
     .col-6.px-5
       p.first-text.first-text-little Мы всегда рады видеть Вас в нашем салоне!
