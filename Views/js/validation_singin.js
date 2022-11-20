@@ -1,10 +1,9 @@
-const main_form = document.forms.reg;
+const singin_form = document.forms.singin_form;
 
-const email = main_form.username;
-const nameus = main_form.name;
-const pass = main_form.password;
+const email = singin_form.username;
+const pass = singin_form.password;
 
-main_form.addEventListener("submit", function(event){
+singin_form.addEventListener("submit", function(event){
   console.log('форма отправляется ...');
 
   if(!email.value){
@@ -17,30 +16,6 @@ main_form.addEventListener("submit", function(event){
                 </div>`
             );
     }
-    event.preventDefault();
-  }
-  else if (emailTest(main_form)) {
-    if(!email.nextElementSibling){
-		email.parentElement.insertAdjacentHTML(
-			"beforeend",
-			`<div class="alert alert-danger mt-2">
-				Электронная почта введена неверно
-			</div>`
-		);
-    }
-	event.preventDefault();
-  }
-
-  if(!nameus.value){
-    console.log('поле Имя не заполнено');
-	if(!nameus.nextElementSibling){
-		nameus.parentElement.insertAdjacentHTML(
-				'beforeend',
-				`<div class="alert alert-danger mt-2">
-			Введите имя перед отправкой
-				</div>`
-			);
-	}
     event.preventDefault();
   }
 
@@ -62,12 +37,6 @@ main_form.addEventListener("submit", function(event){
 email.addEventListener("focus", function (event) {
 	if (email.nextElementSibling) {
 		email.nextElementSibling.remove();
-	}
-});
-
-nameus.addEventListener("focus", function (event) {
-	if (nameus.nextElementSibling) {
-		nameus.nextElementSibling.remove();
 	}
 });
 

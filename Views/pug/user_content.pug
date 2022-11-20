@@ -4,32 +4,28 @@
       h1.first-text.fw-bold.text-center ДОБРО ПОЖАЛОBАТЬ
   .row
     .col-12
-      h2.first-text.first-text-little Узнайте больгше о своих заказах :
-      if (orders.length > 0)
-        for order in orders
-          .order_back.my-2.font-mont
-            p.first-text.fw-bold #{order.title}
-            p.first-text.first-text-little #{order.discription}
-            p.fw-bold.text-center Статус заказа :
-            p.first-text.first-text-littl #{order.status}
-      else
-          h2.first-text.text-center #{message}
+      h2.first-text.first-text-little.px-5 Ваши заказы:
   .row
-    .col-6
+    .col-12.order_back.mb-4.font-mont
+            p.first-text.fw-bold.text-center Название обалденного заказа
+            p.first-text.first-text-little Описание описание описание описание описание описание описание описание описание описание описание описание описание описание
+            p.first-text.text-center Статус заказа : Status
+  .row
+    .col-6.px-5
       p.first-text.first-text-little Мы всегда рады видеть Вас в нашем салоне!
       p.first-text.first-text-little Здесь Вы можете вживую посмотреть кухни, предметы мебели и аксессуары европейских брендов, различные варианты отделок и фасадов и ознакомиться с последними каталогами ведущих фабрик.
       p.first-text.first-text-little Также в салоне Вы всегда можете воспользоваться бесплатной консультацией нашего дизайнера.
-    .col-6.border.border-secondary.border-5
+    .col-6.border.border-secondary.border-5.px-0
       script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad1a5893aac5359b75107c15a65c9184e3bebff8fcf41061271f3a2674e1830c4&amp;width=700&amp;height=600&amp;lang=ru_RU&amp;scroll=true")
   .row
-    .col-12.order_contact
+    .col-12.order_contact.m-4.justify-content-around.fw-bold
       p.contacts-row Адрес:
-        span.font-normal г. Таганрог, ул. Петровская 15
+        span.font-normal.mx-2 г. Таганрог, ул. Петровская 15
       p.contacts-row Телефон:
-        span.font-normal +7 (863) 431-4707
-        span.font-normal +7 (863) 431-1707
+        span.font-normal.mx-2 +7 (863) 431-4707
+        span.font-normal.mx-2 +7 (863) 431-1707
       p.contacts-row Email:
-        span.font-normal barvenko@list.ru
+        span.font-normal.mx-2 barvenko@list.ru
       p.contacts-row Мы есть в VK:
-        span.font-normal vk.com/ludikuhni
+        span.font-normal.mx-2 vk.com/ludikuhni
     h2.first-text.text-center Ждем Вас снова!
