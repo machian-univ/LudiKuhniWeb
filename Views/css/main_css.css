@@ -199,8 +199,16 @@ body{
 }
 
 .order_back{
+  background: #CCCCFF;
+  border: 3px solid #727CD4;
+  border-radius: 25px;
   width: 100%;
-  background-image: '../img/order.png';
+
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.25));
+
+  padding-left: 10vw;
+  padding-right: 9vw;
+  padding-top: 1vh;
 }
 
 .font-mont{
@@ -212,10 +220,15 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding: 30px;
   color: #000000;
 
-  width: 100%;
-  background-image: '../img/order_contact.png';
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  font-weight: 400;
+  font-size: calc(7px + 28 * (35vw/1280));
+
+  background: #BEF6BE;
+  border: 3px solid #00F500;
+  border-radius: 25px;
 }
