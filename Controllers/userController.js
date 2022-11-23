@@ -9,7 +9,7 @@ exports.getHomePage = async (req, res) => {
     let result = await db.awaitQuery("SELECT * FROM orders WHERE userID = ?", [userID])
     if(result.length) {
 
-        orderList = await Promise.all(result.map(async (orderItem) => {
+        var orderList = await Promise.all(result.map(async (orderItem) => {
 
             var order = {
             title: orderItem.title,

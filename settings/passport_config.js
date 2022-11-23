@@ -49,7 +49,7 @@ module.exports = function(passport) {
                     password: hashedPassport
                 };
 
-                const insertSQL = "INSERT INTO users(name, email, password`) VALUES(?, ?, ?)"
+                const insertSQL = "INSERT INTO users(name, email, password) VALUES(?, ?, ?)"
                 let result = await db.awaitQuery(insertSQL, [newUser.name, newUser.email, newUser.password])
 
                 newUser.id = result.insertId
